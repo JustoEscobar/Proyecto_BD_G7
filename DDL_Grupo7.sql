@@ -101,9 +101,12 @@ fecha_hasta date,
 CONSTRAINT PK_club_jugador PRIMARY KEY(nro_club, nro_jugador),
 CONSTRAINT FK_club_jugador_jugador FOREIGN KEY(nro_jugador) REFERENCES jugador(nro_jugador),
 CONSTRAINT FK_club_jugador_club FOREIGN KEY(nro_club) REFERENCES club(nro_club),
---agregar 
---CONSTRAINT CK_fecha_desde
---CONSTRAINT CK_fecha_hasta 
+
+--Fecha desde es igual a la fecha que se encuetra en la fecha de la transferencia
+--CONSTRAINT DF_fecha_desde DEFAULT GETDATE() FOR fecha_desde,
+
+--Chequear que el año de la fecha desde sea 1 año posterior al actual
+CONSTRAINT CK_fecha_hasta CHECK ((YEAR(fecha_desde)) <= (YEAR(GETDATE())) + 1)
 )
 
 
@@ -129,11 +132,7 @@ CONSTRAINT CK_valor_transf CHECK(valor_transf>=0)
 )
 
 ----------------------------------------------------------------------------------------------------------------------------------
---LA FECHA DESDE EN LA QUE UN JUGADOR ESTA EN UN CLUB
---ES LA FECHA DE TRANSFERENCIA Y LA FECHA HASTA 
---QUEDA EN NULO HASTA QUE SE VAYA A OTRO EQUIPO
-
---prueba--
+--prueba
 --declare @FechaInicial Date = '2022/01/01'
 --declare @Fechafinal Date = '1998/01/01'
 
