@@ -69,6 +69,7 @@ CONSTRAINT CK_fecha_nac_menor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16),
 CONSTRAINT CK_fecha_nac_mayor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) <= 50), 
 --Si se puede usar BETWEEN
 --CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) BETWEEN 16 AND 50),
+--CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16 AND <= 50),
 CONSTRAINT CK_altura CHECK(altura>1.50 AND altura<=2.10),
 CONSTRAINT CK_valor_actual CHECK(valor_actual>=0)
 )
