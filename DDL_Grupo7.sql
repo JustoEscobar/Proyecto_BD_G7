@@ -63,10 +63,12 @@ CONSTRAINT PK_jugador PRIMARY KEY(nro_jugador),
 CONSTRAINT FK_jugador_estado FOREIGN KEY(cod_estado) REFERENCES estado_jugador(cod_estado),
 CONSTRAINT FK_jugador_tipo_posicion FOREIGN KEY(cod_tipo_posicion) REFERENCES tipo_posicion(cod_tipo_posicion),
 CONSTRAINT UQ_dni UNIQUE(dni),
---diferencia entre año actual y año fecha nacimiento ingresada sea mayor o igual a 16--
+--diferencia entre aÃ±o actual y aÃ±o fecha nacimiento ingresada sea mayor o igual a 16--
 CONSTRAINT CK_fecha_nac_menor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16),
---edad ingresada sea menor a 50 años--
+--edad ingresada sea menor a 50 aÃ±os--
 CONSTRAINT CK_fecha_nac_mayor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) <= 50), 
+--Si se puede usar BETWEEN
+--CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) BETWEEN 16 AND 50),
 CONSTRAINT CK_altura CHECK(altura>1.50 AND altura<=2.10),
 CONSTRAINT CK_valor_actual CHECK(valor_actual>=0)
 )
@@ -82,15 +84,15 @@ CONSTRAINT FK_jugador_representante_representante FOREIGN KEY(dni_representante)
 CREATE TABLE club(
 nro_club int IDENTITY(1,1) NOT NULL,
 nombre varchar(30) NOT NULL,
-año_fund int NOT NULL,
+aÃ±o_fund int NOT NULL,
 direccion varchar(200) NOT NULL,
 cod_liga int NOT NULL,
 dni_responsable int NOT NULL,
 CONSTRAINT PK_club PRIMARY KEY(nro_club),
 CONSTRAINT FK_club_liga FOREIGN KEY(cod_liga) REFERENCES liga(cod_liga),
 CONSTRAINT FK_club_responsable FOREIGN KEY(dni_responsable) REFERENCES responsable(dni_responsable),
---año fundacion sea menor al actual
-CONSTRAINT CK_año_fund CHECK(año_fund < YEAR(GETDATE()))
+--aÃ±o fundacion sea menor al actual
+CONSTRAINT CK_aÃ±o_fund CHECK(aÃ±o_fund < YEAR(GETDATE()))
 )
 
 CREATE TABLE club_jugador(
@@ -105,7 +107,7 @@ CONSTRAINT FK_club_jugador_club FOREIGN KEY(nro_club) REFERENCES club(nro_club),
 --Fecha desde es igual a la fecha que se encuetra en la fecha de la transferencia
 --CONSTRAINT DF_fecha_desde DEFAULT GETDATE() FOR fecha_desde,
 
---Chequear que el año de la fecha desde sea 1 año posterior al actual
+--Chequear que el aÃ±o de la fecha desde sea 1 aÃ±o posterior al actual
 CONSTRAINT CK_fecha_hasta CHECK ((YEAR(fecha_desde)) <= (YEAR(GETDATE())) + 1)
 )
 
