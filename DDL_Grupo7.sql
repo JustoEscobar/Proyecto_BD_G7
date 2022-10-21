@@ -63,13 +63,13 @@ CONSTRAINT PK_jugador PRIMARY KEY(nro_jugador),
 CONSTRAINT FK_jugador_estado FOREIGN KEY(cod_estado) REFERENCES estado_jugador(cod_estado),
 CONSTRAINT FK_jugador_tipo_posicion FOREIGN KEY(cod_tipo_posicion) REFERENCES tipo_posicion(cod_tipo_posicion),
 CONSTRAINT UQ_dni UNIQUE(dni),
---diferencia entre aÃ±o actual y aÃ±o fecha nacimiento ingresada sea mayor o igual a 16--
+--diferencia entre año actual y año fecha nacimiento ingresada sea mayor o igual a 16--
 CONSTRAINT CK_fecha_nac_menor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16),
---edad ingresada sea menor a 50 aÃ±os--
+--edad ingresada sea menor a 50 años--
 CONSTRAINT CK_fecha_nac_mayor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) <= 50), 
---Si se puede usar BETWEEN
---CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) BETWEEN 16 AND 50),
---CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16 AND <= 50),
+--Con BETWEEN
+--CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) BETWEEN 16 AND 50), 
+--CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16 AND <= 50), 
 CONSTRAINT CK_altura CHECK(altura>1.50 AND altura<=2.10),
 CONSTRAINT CK_valor_actual CHECK(valor_actual>=0)
 )
@@ -85,21 +85,21 @@ CONSTRAINT FK_jugador_representante_representante FOREIGN KEY(dni_representante)
 CREATE TABLE club(
 nro_club int IDENTITY(1,1) NOT NULL,
 nombre varchar(30) NOT NULL,
-aÃ±o_fund int NOT NULL,
+año_fund int NOT NULL,
 direccion varchar(200) NOT NULL,
 cod_liga int NOT NULL,
 dni_responsable int NOT NULL,
 CONSTRAINT PK_club PRIMARY KEY(nro_club),
 CONSTRAINT FK_club_liga FOREIGN KEY(cod_liga) REFERENCES liga(cod_liga),
 CONSTRAINT FK_club_responsable FOREIGN KEY(dni_responsable) REFERENCES responsable(dni_responsable),
---aÃ±o fundacion sea menor al actual
-CONSTRAINT CK_aÃ±o_fund CHECK(aÃ±o_fund < YEAR(GETDATE()))
+--año fundacion sea menor al actual
+CONSTRAINT CK_año_fund CHECK(año_fund < YEAR(GETDATE()))
 )
 
 CREATE TABLE club_jugador(
 nro_jugador int NOT NULL,
 nro_club int NOT NULL,
-fecha_desde date NOT NULL,
+fecha_desde date NOT NULL DEFAULT(GETDATE()),
 fecha_hasta date, 
 CONSTRAINT PK_club_jugador PRIMARY KEY(nro_club, nro_jugador),
 CONSTRAINT FK_club_jugador_jugador FOREIGN KEY(nro_jugador) REFERENCES jugador(nro_jugador),
@@ -107,10 +107,11 @@ CONSTRAINT FK_club_jugador_club FOREIGN KEY(nro_club) REFERENCES club(nro_club),
 
 --Fecha desde es igual a la fecha que se encuetra en la fecha de la transferencia
 --CONSTRAINT DF_fecha_desde DEFAULT GETDATE() FOR fecha_desde,
-
---Chequear que el aÃ±o de la fecha desde sea 1 aÃ±o posterior al actual
+--Chequear que el año de la fecha desde sea 1 año posterior al actual
 CONSTRAINT CK_fecha_hasta CHECK ((YEAR(fecha_desde)) <= (YEAR(GETDATE())) + 1)
 )
+--ALTER TABLE club_jugador
+--ADD CONSTRAINT DF_fecha_desde DEFAULT GETDATE() FOR fecha_desde
 
 
 CREATE TABLE inf_transf_cabecera(
@@ -147,7 +148,8 @@ CONSTRAINT CK_valor_transf CHECK(valor_transf>=0)
 --El domicilio del representante es alpedo
 
 --Ver tema de:
---Triggers
+--Funciones(edad,etc)
+--Triggers 
 --Transacciones
---Vistas
+--Vistas (consultas polentas)
 --Permisos

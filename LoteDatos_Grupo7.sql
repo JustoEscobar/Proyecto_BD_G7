@@ -1,6 +1,6 @@
 USE BD_Grupo7_C2
 
-BEGIN TRANSACTION
+--BEGIN TRANSACTION
 
 --TIPO POSICION
 INSERT INTO tipo_posicion(descripcion) VALUES('Portero')
@@ -119,103 +119,104 @@ insert into responsable (dni_responsable, nombre, apellido, telefono, correo) va
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30289148, 'Jobye', 'Potteridge', '1983-08-28', 'China', 1.50, 'Derecho', 23159291, 1, 1);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36504989, 'Pepillo', 'Losano', '1991-06-13', 'Philippines', 1.51, 'Derecho', 11505787, 2, 2);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (34652649, 'Abie', 'Kyteley', '1995-03-28', 'China', 1.52, 'Izquierdo', 3977104, 3, 3);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43666383, 'Sanders', 'Brailsford', '2003-08-08', 'China', 1.53, 'Izquierdo', 29352840, 4, 4);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27144630, 'Base', 'Splaven', '1998-03-27', 'United Kingdom', 1.53, 'Derecho', 30169259, 5, 5);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32768683, 'Corri', 'Everley', '1991-04-26', 'Indonesia', 1.54, 'Derecho', 18590010, 6, 6);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41054050, 'Dian', 'Critcher', '1994-01-05', 'China', 1.55, 'Derecho', 27673841, 7, 7);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33341894, 'Nathaniel', 'Waplinton', '1981-07-07', 'Azerbaijan', 1.56, 'Izquierdo', 39870797, 8, 8);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37558165, 'Sharl', 'Klosa', '2001-12-28', 'Indonesia', 1.56, 'Derecho', 8577436, 9, 9);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41939957, 'Florri', 'Fencott', '1996-04-28', 'Indonesia', 1.57, 'Izquierdo', 6883329, 10, 10);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41255368, 'Raymund', 'Hanbridge', '1989-10-31', 'Liechtenstein', 1.58, 'Izquierdo', 34197340, 11, 11);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44626040, 'Michele', 'Frude', '1987-07-20', 'Czech Republic', 1.59, 'Derecho', 19783970, 12, 12);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39948830, 'Patrice', 'Webb-Bowen', '1984-06-11', 'Indonesia', 1.60, 'Derecho', 21085282, 13, 13);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41728897, 'Melissa', 'Cicculi', '1992-07-14', 'France', 1.61, 'Derecho', 21173127, 14, 14);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25770224, 'Eveline', 'Vallens', '1983-03-16', 'Russia', 1.62, 'Izquierdo', 5273636, 15, 15);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28204930, 'Averell', 'Crumb', '1984-10-20', 'United Kingdom', 1.63, 'Derecho', 32077218, 16, 16);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32139184, 'Jsandye', 'Louca', '1987-01-07', 'Czech Republic', 1.64, 'Derecho', 7689522, 17, 17);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30497590, 'Augustine', 'Kliment', '1999-07-08', 'Poland', 1.65, 'Derecho', 23026931, 18, 18);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (35318474, 'Guillaume', 'Bedder', '2003-03-30', 'Uganda', 1.66, 'Derecho', 12758575, 19, 19);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31547003, 'Ermentrude', 'Crawcour', '2000-02-01', 'Russia', 1.67, 'Izquierdo', 2057117, 20, 20);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36567940, 'Kalie', 'Martelet', '1983-11-19', 'China', 1.68, 'Izquierdo', 34690441, 21, 21);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36926310, 'Diego', 'Crothers', '1991-07-11', 'Serbia', 1.69, 'Derecho', 27003244, 22, 22);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40028159, 'Tanney', 'Wearden', '2001-04-13', 'Philippines', 1.70, 'Derecho', 32151285, 23, 23);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42938724, 'Claudius', 'Kryszka', '2003-08-30', 'Ukraine', 1.71, 'Derecho', 25770435, 24, 24);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41874548, 'Price', 'Synnot', '2005-03-05', 'France', 1.72, 'Derecho', 39019930, 25, 25);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37418564, 'Mozelle', 'Schnitter', '2005-07-14', 'Russia', 1.73, 'Izquierdo', 32184539, 26, 26);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40238751, 'Anna', 'Van den Velde', '1983-02-18', 'Japan', 1.74, 'Derecho', 33830655, 27, 27);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43002011, 'Kippy', 'Gillbanks', '2006-10-18', 'Ukraine', 1.75, 'Izquierdo', 2848965, 28, 28);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41920192, 'Minnnie', 'Stickells', '1981-11-07', 'Philippines', 1.76, 'Izquierdo', 22169023, 29, 29);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38761082, 'Cash', 'Longhurst', '2006-05-14', 'Poland', 1.77, 'Derecho', 7216707, 30, 30);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43418401, 'Hatti', 'Shilito', '1985-09-15', 'Macao', 1.78, 'Izquierdo', 13503036, 31, 31);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (29208212, 'Zorah', 'Oleshunin', '1987-01-16', 'China', 1.79, 'Izquierdo', 27348231, 32, 32);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44671793, 'Rivy', 'Coorington', '1996-02-14', 'China', 1.80, 'Derecho', 38075453, 33, 33);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39935362, 'Pegeen', 'Goldring', '1991-02-17', 'Nicaragua', 1.81, 'Izquierdo', 5359781, 34, 34);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33010125, 'Christoforo', 'Deares', '1982-06-27', 'Cuba', 1.82, 'Derecho', 38385657, 35, 35);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40250296, 'Marcellina', 'Redan', '1994-06-29', 'China', 1.83, 'Izquierdo', 41478591, 36, 36);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28364730, 'Westbrooke', 'Fyndon', '1991-09-28', 'China', 1.84, 'Izquierdo', 46316380, 37, 37);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39067294, 'Kylie', 'Wearn', '2006-05-03', 'Indonesia', 1.85, 'Izquierdo', 12467772, 38, 38);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43512472, 'Leoine', 'Doubrava', '1986-10-02', 'Brazil', 1.86, 'Derecho', 22454891, 39, 39);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38391162, 'Donica', 'Battrick', '1992-03-16', 'Mali', 1.87, 'Derecho', 19274828, 40, 40);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27304673, 'Craggie', 'Grishinov', '1987-05-27', 'Indonesia', 1.88, 'Izquierdo', 17380953, 41, 41);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27532840, 'Rafi', 'Paxeford', '1996-10-26', 'Russia', 1.89, 'Derecho', 3348285, 42, 42);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (26310391, 'Tina', 'Brookson', '2002-01-13', 'Armenia', 1.90, 'Izquierdo', 11141168, 43, 43);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32827215, 'Ceciley', 'Burrel', '1990-12-30', 'Philippines', 1.91, 'Derecho', 42576838, 44, 44);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25682704, 'Olvan', 'Addams', '2002-08-12', 'Ghana', 1.92, 'Izquierdo', 40669014, 45, 45);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31828297, 'Therine', 'Roony', '1998-03-26', 'Brazil', 1.93, 'Izquierdo', 11783348, 46, 46);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (29145600, 'Tish', 'Hamlen', '2006-08-27', 'Russia', 1.94, 'Izquierdo', 18445817, 47, 47);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25259396, 'Cad', 'Huller', '1992-12-24', 'Libya', 1.95, 'Izquierdo', 1076421, 48, 48);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36480530, 'Orel', 'Balkwill', '1991-01-24', 'Ghana', 1.96, 'Derecho', 38733431, 49, 49);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38790381, 'Tamarra', 'MacBey', '2004-11-02', 'China', 1.97, 'Derecho', 35939611, 50, 50);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28675075, 'Tamas', 'Archanbault', '1984-05-16', 'Slovenia', 1.98, 'Izquierdo', 22747659, 51, 51);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31660687, 'Peder', 'Malyan', '1985-05-12', 'Poland', 1.99, 'Izquierdo', 7794925, 52, 52);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40313814, 'Udall', 'Topliss', '1987-11-13', 'Mali', 2.01, 'Derecho', 34914279, 53, 53);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25598657, 'Corina', 'Nary', '2006-02-15', 'Philippines', 2.02, 'Derecho', 23466612, 54, 54);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30044301, 'Bernadene', 'Sleep', '1994-04-08', 'Philippines', 2.03, 'Derecho', 28763854, 55, 55);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25445513, 'Willis', 'Houlahan', '1990-01-20', 'Philippines', 2.4, 'Derecho', 48961265, 56, 56);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42344349, 'Hayward', 'Habble', '1981-06-08', 'Philippines', 2.05, 'Izquierdo', 45736179, 57, 57);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (35493923, 'Anne-corinne', 'Thor', '1998-12-29', 'Iceland', 2.06, 'Derecho', 48560595, 58, 58);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30421457, 'Moina', 'Lodder', '1993-08-27', 'Vietnam', 2.07, 'Izquierdo', 26192093, 59, 59);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27484101, 'Onofredo', 'Sives', '1990-04-22', 'France', 2.08, 'Derecho', 2299239, 60, 60);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40291844, 'Trix', 'Oxborough', '1982-11-22', 'Indonesia', 2.09, 'Derecho', 7166634, 61, 61);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32323738, 'Kristin', 'Volk', '1986-05-30', 'Portugal', 2.10, 'Izquierdo', 23660542, 62, 62);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28736715, 'Wallache', 'Willan', '1997-04-29', 'China', 1.60, 'Izquierdo', 47045582, 63, 63);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41097468, 'Jermayne', 'Foxton', '2000-05-22', 'Spain', 1.61, 'Derecho', 37062512, 64, 64);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39156662, 'Nadia', 'Pasmore', '1996-11-25', 'Ukraine', 1.70, 'Derecho', 17018683, 65, 65);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30266937, 'Abbe', 'Seakes', '1998-06-01', 'China', 1.71, 'Derecho', 46903625, 66, 66);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44968121, 'Deerdre', 'MacRannell', '1984-10-23', 'Slovenia', 1.72, 'Derecho', 32087360, 67, 67);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43301358, 'Brigit', 'Quincey', '2006-10-11', 'North Korea', 1.72, 'Derecho', 30133304, 68, 68);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33069761, 'Ewan', 'Waltering', '2006-08-16', 'France', 1.73, 'Izquierdo', 17112012, 69, 69);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37750757, 'Carol', 'Arguile', '1987-05-01', 'Indonesia', 1.74, 'Derecho', 14638796, 70, 70);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33822403, 'Erin', 'Asson', '1999-03-22', 'Russia', 1.77, 'Izquierdo', 6783776, 71, 71);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33694553, 'Nola', 'Laverty', '2005-01-30', 'Croatia', 1.78, 'Izquierdo', 39876806, 72, 72);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27596825, 'Any', 'Fillis', '1981-01-09', 'China', 1.78, 'Derecho', 39832835, 73, 73);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33922618, 'Chicky', 'Nise', '1997-05-04', 'Afghanistan', 1.77, 'Derecho', 34221588, 74, 74);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28452915, 'Ginnifer', 'Iredale', '2001-06-26', 'France', 1.75, 'Derecho', 13471712, 75, 75);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31564289, 'Raymond', 'Whiskin', '2005-06-17', 'United States', 1.75, 'Derecho', 12687823, 76, 76);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32822656, 'Onfre', 'Dullingham', '2005-08-16', 'Indonesia', 1.79, 'Izquierdo', 13751802, 77, 77);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43352923, 'Budd', 'Carty', '1990-11-19', 'Iran', 1.55, 'Derecho', 6346304, 78, 78);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40634278, 'Berti', 'Pinkney', '1994-09-23', 'Serbia', 1.66, 'Derecho', 11805885, 79, 79);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38358605, 'Monroe', 'Duer', '1994-06-14', 'Russia', 1.69, 'Izquierdo', 6255337, 80, 80);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44366184, 'Wyndham', 'Bart', '1998-04-07', 'Uganda', 1.64, 'Derecho', 33168555, 81, 81);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41898705, 'Benedikta', 'Bruff', '1993-12-20', 'Denmark', 1.52, 'Izquierdo', 15396518, 82, 82);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40411903, 'Burton', 'Lucian', '1995-09-06', 'Mexico', 1.67, 'Derecho', 36906452, 83, 83);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (34585875, 'Mead', 'Mathet', '1989-09-27', 'Canada', 1.78, 'Izquierdo', 37136004, 84, 84);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37517734, 'Christin', 'Rowlett', '2003-06-15', 'Russia', 1.88, 'Derecho', 25273356, 85, 85);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25793503, 'Osborne', 'Crimmins', '1994-09-02', 'China', 1.80, 'Izquierdo', 40478288, 86, 86);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39587159, 'Aimil', 'Goodsir', '1982-12-22', 'Russia', 1.83, 'Izquierdo', 2246332, 87, 87);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30062560, 'Land', 'Gunson', '1988-09-04', 'Czech Republic', 1.81, 'Derecho', 3586865, 88, 88);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42766940, 'Bobbie', 'Anthill', '2004-09-05', 'Honduras', 1.58, 'Derecho', 37107914, 89, 89);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41531080, 'Yoshi', 'Esslemont', '1985-10-12', 'Czech Republic', 1.77, 'Derecho', 30797149, 90, 90);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (26811177, 'Amalia', 'Beinke', '1984-10-15', 'Zambia', 1.63, 'Derecho', 19479399, 91, 91);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25138138, 'Pren', 'Colton', '1989-08-30', 'China', 1.50, 'Derecho', 7182020, 92, 92);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37282282, 'Jorgan', 'Sharvill', '2004-12-15', 'Brazil', 1.78, 'Derecho', 35509090, 93, 93);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25482945, 'Jada', 'Sheward', '1984-12-31', 'Latvia', 1.72, 'Izquierdo', 5897488, 94, 94);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38332747, 'Cyb', 'Bassham', '1980-11-17', 'Ukraine', 1.70, 'Izquierdo', 36817060, 95, 95);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40148629, 'Jermaine', 'Adriaan', '1986-01-13', 'Indonesia', 1.74, 'Derecho', 21105662, 96, 96);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37596087, 'Sax', 'Hearnden', '1994-02-24', 'China', 1.76, 'Derecho', 11943413, 97, 97);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31311196, 'Catherin', 'Dutch', '1981-07-12', 'Sweden', 1.85, 'Derecho', 45880872, 98, 98);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38466413, 'Trudey', 'Castaignet', '2005-05-09', 'Russia', 1.89, 'Izquierdo', 11672988, 99, 99);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31062891, 'Fiorenze', 'Dunton', '1997-09-26', 'Greece', 1.90, 'Derecho', 11384875, 100, 100);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43666383, 'Sanders', 'Brailsford', '2003-08-08', 'China', 1.53, 'Izquierdo', 29352840, 1, 4);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27144630, 'Base', 'Splaven', '1998-03-27', 'United Kingdom', 1.53, 'Derecho', 30169259, 2, 5);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32768683, 'Corri', 'Everley', '1991-04-26', 'Indonesia', 1.54, 'Derecho', 18590010, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41054050, 'Dian', 'Critcher', '1994-01-05', 'China', 1.55, 'Derecho', 27673841, 1, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33341894, 'Nathaniel', 'Waplinton', '1981-07-07', 'Azerbaijan', 1.56, 'Izquierdo', 39870797, 2, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37558165, 'Sharl', 'Klosa', '2001-12-28', 'Indonesia', 1.56, 'Derecho', 8577436, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41939957, 'Florri', 'Fencott', '1996-04-28', 'Indonesia', 1.57, 'Izquierdo', 6883329, 1, 10);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41255368, 'Raymund', 'Hanbridge', '1989-10-31', 'Liechtenstein', 1.58, 'Izquierdo', 34197340, 2, 11);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44626040, 'Michele', 'Frude', '1987-07-20', 'Czech Republic', 1.59, 'Derecho', 19783970, 3, 12);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39948830, 'Patrice', 'Webb-Bowen', '1984-06-11', 'Indonesia', 1.60, 'Derecho', 21085282, 1, 13);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41728897, 'Melissa', 'Cicculi', '1992-07-14', 'France', 1.61, 'Derecho', 21173127, 2, 14);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25770224, 'Eveline', 'Vallens', '1983-03-16', 'Russia', 1.62, 'Izquierdo', 5273636, 3, 1);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28204930, 'Averell', 'Crumb', '1984-10-20', 'United Kingdom', 1.63, 'Derecho', 32077218, 1, 2);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32139184, 'Jsandye', 'Louca', '1987-01-07', 'Czech Republic', 1.64, 'Derecho', 7689522, 2, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30497590, 'Augustine', 'Kliment', '1999-07-08', 'Poland', 1.65, 'Derecho', 23026931, 3, 4);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (35318474, 'Guillaume', 'Bedder', '2003-03-30', 'Uganda', 1.66, 'Derecho', 12758575, 1, 5);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31547003, 'Ermentrude', 'Crawcour', '2000-02-01', 'Russia', 1.67, 'Izquierdo', 2057117, 2, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36567940, 'Kalie', 'Martelet', '1983-11-19', 'China', 1.68, 'Izquierdo', 34690441, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36926310, 'Diego', 'Crothers', '1991-07-11', 'Serbia', 1.69, 'Derecho', 27003244, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40028159, 'Tanney', 'Wearden', '2001-04-13', 'Philippines', 1.70, 'Derecho', 32151285, 2, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42938724, 'Claudius', 'Kryszka', '2003-08-30', 'Ukraine', 1.71, 'Derecho', 25770435, 3, 10);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41874548, 'Price', 'Synnot', '2005-03-05', 'France', 1.72, 'Derecho', 39019930, 1, 11);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37418564, 'Mozelle', 'Schnitter', '2005-07-14', 'Russia', 1.73, 'Izquierdo', 32184539, 2, 12);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40238751, 'Anna', 'Van den Velde', '1983-02-18', 'Japan', 1.74, 'Derecho', 33830655, 3, 13);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43002011, 'Kippy', 'Gillbanks', '2006-10-18', 'Ukraine', 1.75, 'Izquierdo', 2848965, 1, 14);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41920192, 'Minnnie', 'Stickells', '1981-11-07', 'Philippines', 1.76, 'Izquierdo', 22169023, 2, 1);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38761082, 'Cash', 'Longhurst', '2006-05-14', 'Poland', 1.77, 'Derecho', 7216707, 3, 2);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43418401, 'Hatti', 'Shilito', '1985-09-15', 'Macao', 1.78, 'Izquierdo', 13503036, 1, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (29208212, 'Zorah', 'Oleshunin', '1987-01-16', 'China', 1.79, 'Izquierdo', 27348231, 2, 4);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44671793, 'Rivy', 'Coorington', '1996-02-14', 'China', 1.80, 'Derecho', 38075453, 3, 5);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39935362, 'Pegeen', 'Goldring', '1991-02-17', 'Nicaragua', 1.81, 'Izquierdo', 5359781, 1, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33010125, 'Christoforo', 'Deares', '1982-06-27', 'Cuba', 1.82, 'Derecho', 38385657, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40250296, 'Marcellina', 'Redan', '1994-06-29', 'China', 1.83, 'Izquierdo', 41478591, 3, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28364730, 'Westbrooke', 'Fyndon', '1991-09-28', 'China', 1.84, 'Izquierdo', 46316380, 1, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39067294, 'Kylie', 'Wearn', '2006-05-03', 'Indonesia', 1.85, 'Izquierdo', 12467772, 2, 10);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43512472, 'Leoine', 'Doubrava', '1986-10-02', 'Brazil', 1.86, 'Derecho', 22454891, 3, 11);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38391162, 'Donica', 'Battrick', '1992-03-16', 'Mali', 1.87, 'Derecho', 19274828, 1, 12);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27304673, 'Craggie', 'Grishinov', '1987-05-27', 'Indonesia', 1.88, 'Izquierdo', 17380953, 2, 13);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27532840, 'Rafi', 'Paxeford', '1996-10-26', 'Russia', 1.89, 'Derecho', 3348285, 3, 14);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (26310391, 'Tina', 'Brookson', '2002-01-13', 'Armenia', 1.90, 'Izquierdo', 11141168, 1, 1);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32827215, 'Ceciley', 'Burrel', '1990-12-30', 'Philippines', 1.91, 'Derecho', 42576838, 2, 2);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25682704, 'Olvan', 'Addams', '2002-08-12', 'Ghana', 1.92, 'Izquierdo', 40669014, 3, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31828297, 'Therine', 'Roony', '1998-03-26', 'Brazil', 1.93, 'Izquierdo', 11783348, 1, 4);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (29145600, 'Tish', 'Hamlen', '2006-08-27', 'Russia', 1.94, 'Izquierdo', 18445817, 2, 5);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25259396, 'Cad', 'Huller', '1992-12-24', 'Libya', 1.95, 'Izquierdo', 1076421, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (36480530, 'Orel', 'Balkwill', '1991-01-24', 'Ghana', 1.96, 'Derecho', 38733431, 1, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38790381, 'Tamarra', 'MacBey', '2004-11-02', 'China', 1.97, 'Derecho', 35939611, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28675075, 'Tamas', 'Archanbault', '1984-05-16', 'Slovenia', 1.98, 'Izquierdo', 22747659, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31660687, 'Peder', 'Malyan', '1985-05-12', 'Poland', 1.99, 'Izquierdo', 7794925, 1, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40313814, 'Udall', 'Topliss', '1987-11-13', 'Mali', 2.01, 'Derecho', 34914279, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25598657, 'Corina', 'Nary', '2006-02-15', 'Philippines', 2.02, 'Derecho', 23466612, 3, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30044301, 'Bernadene', 'Sleep', '1994-04-08', 'Philippines', 2.03, 'Derecho', 28763854, 1, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25445513, 'Willis', 'Houlahan', '1990-01-20', 'Philippines', 2.4, 'Derecho', 48961265, 3, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42344349, 'Hayward', 'Habble', '1981-06-08', 'Philippines', 2.05, 'Izquierdo', 45736179, 2, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (35493923, 'Anne-corinne', 'Thor', '1998-12-29', 'Iceland', 2.06, 'Derecho', 48560595, 3, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30421457, 'Moina', 'Lodder', '1993-08-27', 'Vietnam', 2.07, 'Izquierdo', 26192093, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27484101, 'Onofredo', 'Sives', '1990-04-22', 'France', 2.08, 'Derecho', 2299239, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40291844, 'Trix', 'Oxborough', '1982-11-22', 'Indonesia', 2.09, 'Derecho', 7166634, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32323738, 'Kristin', 'Volk', '1986-05-30', 'Portugal', 2.10, 'Izquierdo', 23660542, 1, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28736715, 'Wallache', 'Willan', '1997-04-29', 'China', 1.60, 'Izquierdo', 47045582, 1, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41097468, 'Jermayne', 'Foxton', '2000-05-22', 'Spain', 1.61, 'Derecho', 37062512, 1, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39156662, 'Nadia', 'Pasmore', '1996-11-25', 'Ukraine', 1.70, 'Derecho', 17018683, 2, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30266937, 'Abbe', 'Seakes', '1998-06-01', 'China', 1.71, 'Derecho', 46903625, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44968121, 'Deerdre', 'MacRannell', '1984-10-23', 'Slovenia', 1.72, 'Derecho', 32087360, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43301358, 'Brigit', 'Quincey', '2006-10-11', 'North Korea', 1.72, 'Derecho', 30133304, 3, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33069761, 'Ewan', 'Waltering', '2006-08-16', 'France', 1.73, 'Izquierdo', 17112012, 2, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37750757, 'Carol', 'Arguile', '1987-05-01', 'Indonesia', 1.74, 'Derecho', 14638796, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33822403, 'Erin', 'Asson', '1999-03-22', 'Russia', 1.77, 'Izquierdo', 6783776, 2, 1);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33694553, 'Nola', 'Laverty', '2005-01-30', 'Croatia', 1.78, 'Izquierdo', 39876806, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (27596825, 'Any', 'Fillis', '1981-01-09', 'China', 1.78, 'Derecho', 39832835, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (33922618, 'Chicky', 'Nise', '1997-05-04', 'Afghanistan', 1.77, 'Derecho', 34221588, 1, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (28452915, 'Ginnifer', 'Iredale', '2001-06-26', 'France', 1.75, 'Derecho', 13471712, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31564289, 'Raymond', 'Whiskin', '2005-06-17', 'United States', 1.75, 'Derecho', 12687823, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (32822656, 'Onfre', 'Dullingham', '2005-08-16', 'Indonesia', 1.79, 'Izquierdo', 13751802, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (43352923, 'Budd', 'Carty', '1990-11-19', 'Iran', 1.55, 'Derecho', 6346304, 3, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40634278, 'Berti', 'Pinkney', '1994-09-23', 'Serbia', 1.66, 'Derecho', 11805885, 2, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38358605, 'Monroe', 'Duer', '1994-06-14', 'Russia', 1.69, 'Izquierdo', 6255337, 2, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (44366184, 'Wyndham', 'Bart', '1998-04-07', 'Uganda', 1.64, 'Derecho', 33168555, 2, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41898705, 'Benedikta', 'Bruff', '1993-12-20', 'Denmark', 1.52, 'Izquierdo', 15396518, 2, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40411903, 'Burton', 'Lucian', '1995-09-06', 'Mexico', 1.67, 'Derecho', 36906452, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (34585875, 'Mead', 'Mathet', '1989-09-27', 'Canada', 1.78, 'Izquierdo', 37136004, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37517734, 'Christin', 'Rowlett', '2003-06-15', 'Russia', 1.88, 'Derecho', 25273356, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25793503, 'Osborne', 'Crimmins', '1994-09-02', 'China', 1.80, 'Izquierdo', 40478288, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (39587159, 'Aimil', 'Goodsir', '1982-12-22', 'Russia', 1.83, 'Izquierdo', 2246332, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30062560, 'Land', 'Gunson', '1988-09-04', 'Czech Republic', 1.81, 'Derecho', 3586865, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42766940, 'Bobbie', 'Anthill', '2004-09-05', 'Honduras', 1.58, 'Derecho', 37107914, 2, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41531080, 'Yoshi', 'Esslemont', '1985-10-12', 'Czech Republic', 1.77, 'Derecho', 30797149, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (26811177, 'Amalia', 'Beinke', '1984-10-15', 'Zambia', 1.63, 'Derecho', 19479399, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25138138, 'Pren', 'Colton', '1989-08-30', 'China', 1.50, 'Derecho', 7182020, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37282282, 'Jorgan', 'Sharvill', '2004-12-15', 'Brazil', 1.78, 'Derecho', 35509090, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25482945, 'Jada', 'Sheward', '1984-12-31', 'Latvia', 1.72, 'Izquierdo', 5897488, 3, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38332747, 'Cyb', 'Bassham', '1980-11-17', 'Ukraine', 1.70, 'Izquierdo', 36817060, 1, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40148629, 'Jermaine', 'Adriaan', '1986-01-13', 'Indonesia', 1.74, 'Derecho', 21105662, 1, 6);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (37596087, 'Sax', 'Hearnden', '1994-02-24', 'China', 1.76, 'Derecho', 11943413, 1, 7);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31311196, 'Catherin', 'Dutch', '1981-07-12', 'Sweden', 1.85, 'Derecho', 45880872, 1, 8);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38466413, 'Trudey', 'Castaignet', '2005-05-09', 'Russia', 1.89, 'Izquierdo', 11672988, 1, 9);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31062891, 'Fiorenze', 'Dunton', '1997-09-26', 'Greece', 1.90, 'Derecho', 11384875, 1, 10);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (55000000, 'Justo', 'Escobar', '1997-09-26', 'Greece', 2.10, 'Derecho', 11384875, 1, 10);
 
 
 --JUGADOR_REPRESENTANTE
@@ -375,13 +376,31 @@ insert into club (nombre, año_fund, direccion,cod_liga, dni_responsable) values 
 
 
 --CLUB_JUGADOR
---INSERT INTO club_jugador(nro_club,nro_jugador,fecha_desde,fecha_hasta) VALUES()
+--INSERT INTO club_jugador(nro_club,nro_jugador,fecha_hasta) VALUES()
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,1)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,2)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,3)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,4)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,5)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,6)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,7)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,8)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(1,10)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,12)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,13)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,14)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,15)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,16)
 
 --INF_TRANSF_CABECERA
 --INSERT INTO inf_transf_cabecera(nro_temporada) VALUES()
+INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(1)
+INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(2)
+INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(3)
 
 --INF_TRANSF_DETALLE
 --INSERT INTO inf_transf_detalle(nro_informe,nro_informe_detalle, nro_club,nro_jugador,fecha_transf,valor_transf) VALUES()
+INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES(1,1,1,1200500)
 
 
 
