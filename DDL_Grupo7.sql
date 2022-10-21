@@ -70,7 +70,7 @@ CONSTRAINT CK_fecha_nac_mayor CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) <= 50),
 --Con BETWEEN
 --CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) BETWEEN 16 AND 50), 
 --CONSTRAINT CK_fecha_nac CHECK(DATEDIFF (YEAR,fecha_nac,GETDATE()) >= 16 AND <= 50), 
-CONSTRAINT CK_altura CHECK(altura>1.50 AND altura<=2.10),
+CONSTRAINT CK_altura CHECK(altura>=1.50 AND altura<=2.10),
 CONSTRAINT CK_valor_actual CHECK(valor_actual>=0)
 )
 
@@ -136,17 +136,6 @@ CONSTRAINT CK_valor_transf CHECK(valor_transf>=0)
 )
 
 ----------------------------------------------------------------------------------------------------------------------------------
---prueba
---declare @FechaInicial Date = '2022/01/01'
---declare @Fechafinal Date = '1998/01/01'
-
---select DATEDIFF (YEAR,fecha_nac ,GETDATE())  as resultado
-
---Sacar tabla categoria club
---Pensar si agregar tabla paises para la nacionalidad de los jugadores
---Direccion del club (provincia,ciudad) o direccion completa en campo libre
---El domicilio del representante es alpedo
-
 --Ver tema de:
 --Funciones(edad,etc)
 --Triggers 

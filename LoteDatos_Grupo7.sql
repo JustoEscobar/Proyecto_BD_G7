@@ -171,7 +171,7 @@ insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (40313814, 'Udall', 'Topliss', '1987-11-13', 'Mali', 2.01, 'Derecho', 34914279, 2, 7);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25598657, 'Corina', 'Nary', '2006-02-15', 'Philippines', 2.02, 'Derecho', 23466612, 3, 3);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30044301, 'Bernadene', 'Sleep', '1994-04-08', 'Philippines', 2.03, 'Derecho', 28763854, 1, 3);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25445513, 'Willis', 'Houlahan', '1990-01-20', 'Philippines', 2.4, 'Derecho', 48961265, 3, 3);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (25445513, 'Willis', 'Houlahan', '1990-01-20', 'Philippines', 2.04, 'Derecho', 48961265, 3, 3);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (42344349, 'Hayward', 'Habble', '1981-06-08', 'Philippines', 2.05, 'Izquierdo', 45736179, 2, 3);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (35493923, 'Anne-corinne', 'Thor', '1998-12-29', 'Iceland', 2.06, 'Derecho', 48560595, 3, 3);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (30421457, 'Moina', 'Lodder', '1993-08-27', 'Vietnam', 2.07, 'Izquierdo', 26192093, 3, 6);
@@ -216,7 +216,6 @@ insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31311196, 'Catherin', 'Dutch', '1981-07-12', 'Sweden', 1.85, 'Derecho', 45880872, 1, 8);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38466413, 'Trudey', 'Castaignet', '2005-05-09', 'Russia', 1.89, 'Izquierdo', 11672988, 1, 9);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31062891, 'Fiorenze', 'Dunton', '1997-09-26', 'Greece', 1.90, 'Derecho', 11384875, 1, 10);
-insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (55000000, 'Justo', 'Escobar', '1997-09-26', 'Greece', 2.10, 'Derecho', 11384875, 1, 10);
 
 
 --JUGADOR_REPRESENTANTE
@@ -401,8 +400,6 @@ INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(3)
 --INF_TRANSF_DETALLE
 --INSERT INTO inf_transf_detalle(nro_informe,nro_informe_detalle, nro_club,nro_jugador,fecha_transf,valor_transf) VALUES()
 INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES(1,1,1,1200500)
-
-
 
 --COMMIT TRANSACTION
 --ROLLBACK TRANSACTION
