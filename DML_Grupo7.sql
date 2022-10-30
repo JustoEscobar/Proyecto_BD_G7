@@ -1,4 +1,4 @@
--USE BD_Grupo7_C2
+USE BD_Grupo7_C2
 
 --CONSULTAS
 
@@ -28,5 +28,24 @@ FROM jugador j
 INNER JOIN tipo_posicion tp ON tp.cod_tipo_posicion = j.cod_tipo_posicion
 GROUP BY tp.cod_tipo_posicion, tp.descripcion
 
---seguir..
+--Jugador con clubes
+SELECT j.nombre 'Jugador',c.nombre as 'Club'
+FROM club_jugador cj
+INNER JOIN club c ON c.nro_club = cj.nro_club
+INNER JOIN jugador j ON j.nro_jugador = cj.nro_jugador
+
+--Jugadores sin club
+SELECT j.nombre as 'Nombre Jugador', c.nombre as 'Club' 
+FROM jugador j  
+LEFT JOIN club_jugador cj ON cj.nro_jugador = j.nro_jugador
+LEFT JOIN club c ON c.nro_club= cj.nro_club
+WHERE c.nro_club is NULL
+
+--Mostrar todos los clubes en los que estuvo X jugador y con sus fechas
+--Mostrar los jugadores sin representantes
+--Mostrar los representantes sin jugadores
+--Mostrar cuantos representantes tiene cada jugador
+--Mostrar cuantos clubes estuvo cada jugador
+--Buscar transferencias por temporadas: ejemplo Temporada 20/21
+--Cuantos clubes hay por liga
 

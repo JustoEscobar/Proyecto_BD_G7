@@ -390,6 +390,7 @@ INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,13)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,14)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,15)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,16)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(12,17)
 
 --INF_TRANSF_CABECERA
 --INSERT INTO inf_transf_cabecera(nro_temporada) VALUES()
