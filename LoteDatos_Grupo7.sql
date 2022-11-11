@@ -391,6 +391,7 @@ INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(2,14)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,15)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,16)
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(12,17)
+INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(20,1)
 
 --INF_TRANSF_CABECERA
 --INSERT INTO inf_transf_cabecera(nro_temporada) VALUES()
@@ -399,7 +400,7 @@ INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(2)
 INSERT INTO inf_transf_cabecera(nro_temporada) VALUES(3)
 
 --INF_TRANSF_DETALLE
---INSERT INTO inf_transf_detalle(nro_informe,nro_informe_detalle, nro_club,nro_jugador,fecha_transf,valor_transf) VALUES()
+--INSERT INTO inf_transf_detalle(nro_informe, nro_club,nro_jugador,fecha_transf,valor_transf) VALUES()
 INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES(1,1,1,1200500)
 
 --COMMIT TRANSACTION

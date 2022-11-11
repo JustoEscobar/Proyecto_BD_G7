@@ -41,6 +41,7 @@ LEFT JOIN club_jugador cj ON cj.nro_jugador = j.nro_jugador
 LEFT JOIN club c ON c.nro_club= cj.nro_club
 WHERE c.nro_club is NULL
 
+
 --Mostrar todos los clubes en los que estuvo X jugador y con sus fechas
 --Mostrar los jugadores sin representantes
 --Mostrar los representantes sin jugadores
