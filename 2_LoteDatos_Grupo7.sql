@@ -216,6 +216,7 @@ insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31311196, 'Catherin', 'Dutch', '1981-07-12', 'Sweden', 1.85, 'Derecho', 45880872, 1, 8);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (38466413, 'Trudey', 'Castaignet', '2005-05-09', 'Russia', 1.89, 'Izquierdo', 11672988, 1, 9);
 insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (31062891, 'Fiorenze', 'Dunton', '1997-09-26', 'Greece', 1.90, 'Derecho', 11384875, 1, 10);
+insert into jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) values (41249166, 'Justo', 'Escobar', '2006-09-26', 'Greece', 1.90, 'Derecho', 11384875, 1, 10);
 
 
 --JUGADOR_REPRESENTANTE
