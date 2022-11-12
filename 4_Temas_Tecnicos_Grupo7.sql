@@ -58,6 +58,21 @@ ORDER BY cj.nro_jugador
 -------------------------------------------------------------------------------------------------------
 /*VISTAS*/
 
+--Vista de la ficha tecnica de los jugadores
+CREATE VIEW ficha_tecnica_operacion
+AS
+	SELECT (j.nombre+''+j.apellido) as 'Jugador',tp.descripcion 'Posicion',DATEDIFF(YEAR,fecha_nac,GETDATE()) as 'Edad',j.pie_habil as 'Pie Habil',j.altura as 'Altura',('$'+CAST(id.valor_transf as varchar(250))) as 'Precio operacion', id.fecha_transf as 'Fecha', c.nombre as 'Club', ej.descripcion 'Tipo Operacion'
+	FROM inf_transf_detalle id
+		INNER JOIN club_jugador cj ON cj.nro_club = id.nro_club AND cj.nro_jugador = id.nro_jugador
+		INNER JOIN club c ON cj.nro_club = c.nro_club
+		INNER JOIN jugador j ON cj.nro_jugador = j.nro_jugador
+		INNER JOIN tipo_posicion tp ON tp.cod_tipo_posicion = j.cod_tipo_posicion
+		INNER JOIN estado_jugador ej ON ej.cod_estado = j.cod_estado
+-------------------------------------------------------------------------------------------------------
+SELECT *
+FROM ficha_tecnica_operacion
+-------------------------------------------------------------------------------------------------------
+--Otra vista.......
 
 -------------------------------------------------------------------------------------------------------
 /*TRANSACCIONES*/
