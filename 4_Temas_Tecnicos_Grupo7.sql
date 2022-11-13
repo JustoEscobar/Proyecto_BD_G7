@@ -13,24 +13,64 @@ RETURN @edad
 END
 ----------------------------------------------------------------------------------------------------
 /*PROCEDIMIENTOS*/
-CREATE PROCEDURE actualizar_fecha_hasta_jugador()
+
+--Procedimiento para actualizar el valor de un jugador
+CREATE PROCEDURE actualizar_valor_jugador
+	@nro_jugador int ,
+	@nuevo_valor  float
+	AS
+	BEGIN
+	  UPDATE jugador
+	   SET jugador.valor_actual = @nuevo_valor where jugador.nro_jugador = @nro_jugador
+    END
+----------------------------------------------------------------------------------------------------
+--Prueba
+EXEC actualizar_valor_jugador 1,125000000
+------------------------------------------
+SELECT *
+FROM jugador
+----------------------------------------------------------------------------------------------------
+--Procedimiento para insertar un club nuevo
+CREATE PROCEDURE insertar_club
+@nombre varchar,
+@año_fund int,
+@direccion varchar,
+@cod_liga int,
+@dni_resp int
 AS
 BEGIN
-	DECLARE @nuevo_club int, @nuevo_jugador int, @viejo_club int
-	SET @viejo_club = (SELECT nro_club FROM club_jugador
-						WHERE nro_club = (SELECT nro_club FROM inserted))
-						
-	SET @nuevo_club = (SELECT nro_club FROM inserted);
-	SET @nuevo_jugador = (SELECT nro_jugador FROM inserted);
-	
-	INSERT INTO club_jugador(nro_club,nro_jugador) VALUES (@nuevo_club,@nuevo_jugador)
-	INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES ()
-	
-	UPDATE club_jugador 
-		SET fecha_hasta = GETDATE()
-		WHERE nro_club = @viejo_club AND nro_jugador = @nuevo_jugador
-		
+	IF NOT EXISTS(SELECT * FROM club c WHERE c.nombre = @nombre)
+	BEGIN
+		INSERT INTO club VALUES(@nombre,@año_fund,@direccion,@cod_liga,@dni_resp)
+		PRINT  ('El Club fue insertado satisfactoriamente')
+	END
+	ELSE
+	PRINT ('El Club ya fue insertado anteriormente')
 END
+----------------------------------------------------------------------------------------------------
+--prueba
+EXEC insertar_club 'Manchester United',1945,'Av. Pujol 1200',1,32111100
+----------------------------------------------------------------------------------------------------
+--Procedimiento para eliminar un club
+
+----------------------------------------------------------------------------------------------------
+--Procedimiento para eliminar un jugador
+ CREATE PROCEDURE eliminar_jugador
+ @nro_jugador as int,
+ @nro_jugadorElim as int
+ as
+ declare @TUsuario int
+ declare @TUsuarioElim int
+ set @TUsuario = (select u.idtipoUsuario from usuario u where @cuilUsuario = u.cuil)
+ set @TUsuarioElim = (select u.idtipoUsuario from usuario u where @cuilUsuarioElim = u.cuil)
+ if(@TUsuario < @TUsuarioElim)
+ begin
+	delete usuario  
+	where usuario.cuil =  @cuilUsuarioElim
+end
+else
+	print 'No tiene los permisos suficientes'
+
 ----------------------------------------------------------------------------------------------------
 /*TRIGGERS*/
 
@@ -51,7 +91,7 @@ END
 INSERT INTO club_jugador(nro_club,nro_jugador) VALUES(3,2)
 INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES(1,3,2,155555555)
 
-SELECT cj.nro_club,j.nombre ,cj.nro_jugador,j.valor_actual 
+SELECT cj.nro_club,j.nombre ,cj.nro_jugador,j.valor_actual
 FROM club_jugador cj
 INNER JOIN jugador j ON j.nro_jugador = cj.nro_jugador
 ORDER BY cj.nro_jugador
@@ -78,9 +118,10 @@ FROM ficha_tecnica_operacion
 /*TRANSACCIONES*/
 
 
+
 -------------------------------------------------------------------------------------------------------
 --Trigger para copiar datos insertados en tabla transf detalle a la tabla club_jugador
---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
 CREATE TRIGGER TG2_transf_jugador
 ON inf_transf_detalle
 FOR INSERT
@@ -99,3 +140,22 @@ INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VA
 SELECT *
 FROM club_jugador
 -------------------------------------------------------------------------------------------------
+--Procedimiento para actualizar fecha hasta del jugador con el club
+CREATE PROCEDURE actualizar_fecha_hasta_jugador()
+AS
+BEGIN
+	DECLARE @nuevo_club int, @nuevo_jugador int, @viejo_club int
+	SET @viejo_club = (SELECT nro_club FROM club_jugador
+						WHERE nro_club = (SELECT nro_club FROM inserted))
+						
+	SET @nuevo_club = (SELECT nro_club FROM inserted);
+	SET @nuevo_jugador = (SELECT nro_jugador FROM inserted);
+	
+	INSERT INTO club_jugador(nro_club,nro_jugador) VALUES (@nuevo_club,@nuevo_jugador)
+	INSERT INTO inf_transf_detalle(nro_informe,nro_club,nro_jugador,valor_transf) VALUES ()
+	
+	UPDATE club_jugador 
+		SET fecha_hasta = GETDATE()
+		WHERE nro_club = @viejo_club AND nro_jugador = @nuevo_jugador
+		
+END
