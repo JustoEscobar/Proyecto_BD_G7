@@ -182,6 +182,7 @@ CREATE TABLE inf_transf_detalle(
 	nro_jugador int NOT NULL,
 	valor_transf float NOT NULL,
 	CONSTRAINT PK_inf_transf_detalle PRIMARY KEY(nro_informe, nro_informe_detalle),
+	CONSTRAINT FK_inf_transf_detalle_cabecera FOREIGN KEY(nro_informe) REFERENCES inf_transf_cabecera(nro_informe),
 	CONSTRAINT FK_inf_transf_detalle_club_jugador FOREIGN KEY(nro_club, nro_jugador) REFERENCES club_jugador(nro_club, nro_jugador),
 	--CONSTRAINT DF_fecha_transf DEFAULT GETDATE() FOR fecha_transf,
 	CONSTRAINT CK_valor_transf CHECK(valor_transf>=0)  

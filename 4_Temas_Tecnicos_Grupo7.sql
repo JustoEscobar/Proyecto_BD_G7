@@ -51,27 +51,6 @@ END
 --prueba
 EXEC insertar_club 'Manchester United',1945,'Av. Pujol 1200',1,32111100
 ----------------------------------------------------------------------------------------------------
---Procedimiento para eliminar un club
-
-----------------------------------------------------------------------------------------------------
---Procedimiento para eliminar un jugador
- CREATE PROCEDURE eliminar_jugador
- @nro_jugador as int,
- @nro_jugadorElim as int
- as
- declare @TUsuario int
- declare @TUsuarioElim int
- set @TUsuario = (select u.idtipoUsuario from usuario u where @cuilUsuario = u.cuil)
- set @TUsuarioElim = (select u.idtipoUsuario from usuario u where @cuilUsuarioElim = u.cuil)
- if(@TUsuario < @TUsuarioElim)
- begin
-	delete usuario  
-	where usuario.cuil =  @cuilUsuarioElim
-end
-else
-	print 'No tiene los permisos suficientes'
-
-----------------------------------------------------------------------------------------------------
 /*TRIGGERS*/
 
 --Trigger de actualizacion de valor_actual de un jugador al realizar una transferencia
@@ -112,16 +91,43 @@ AS
 SELECT *
 FROM ficha_tecnica_operacion
 -------------------------------------------------------------------------------------------------------
---Otra vista.......
-
--------------------------------------------------------------------------------------------------------
 /*TRANSACCIONES*/
+SELECT *
+FROM jugador
 
+BEGIN TRANSACTION
+UPDATE jugador SET jugador.pie_habil = 'Izquierdo'
+WHERE dni = 30289148
+COMMIT
+ROLLBACK
+-------------------------------------------------------------
+/*Ejemplo declarar el error */
+DECLARE @Error int
 
+BEGIN TRANSACTION
+UPDATE jugador SET jugador.pie_habil = 'Izquierdo'
+where dni = 30289148
+
+INSERT INTO jugador (dni, nombre, apellido, fecha_nac, nacionalidad, altura, pie_habil, valor_actual, cod_estado, cod_tipo_posicion) 
+VALUES (30289148, 'Jobye', 'Potteridge', '1983-08-28', 'China', 1.50, 'Derecho', 23159291, 1, 1);
+
+SET @Error = @@ERROR
+  IF  (@Error <>0)
+	BEGIN
+		ROLLBACK TRANSACTION
+		PRINT 'Error en la transacción'
+	END
+	ELSE
+	COMMIT
 
 -------------------------------------------------------------------------------------------------------
+--PARA IMPLEMENTAR/ARREGLAR
+
+--Procedimiento para eliminar un club
+
+--Procedimiento para eliminar un jugador
+
 --Trigger para copiar datos insertados en tabla transf detalle a la tabla club_jugador
--------------------------------------------------------------------------------------------------------
 CREATE TRIGGER TG2_transf_jugador
 ON inf_transf_detalle
 FOR INSERT
