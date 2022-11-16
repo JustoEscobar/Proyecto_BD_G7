@@ -122,7 +122,82 @@ SET @Error = @@ERROR
 
 -------------------------------------------------------------------------------------------------------
 --PARA IMPLEMENTAR/ARREGLAR
+/*TRIGGERS*/
 
+--Se crea la tabla para registrar los cambios
+
+CREATE TABLE Reg_cambios_valor_jugador
+(
+	nro_jugador int NOT NULL	PRIMARY KEY,
+	valor_anterior int NOT NULL,
+	fecha_cambio datetime NOT NULL DEFAULT getdate(),
+	/*usuario varchar(20) not null*/
+)
+
+--Se crea el trigger para cambio
+
+CREATE TRIGGER AU_CambiosReporte
+ON Reporte_valor_jugador
+ AFTER UPDATE 
+ AS 
+ -- ¿Ha cambiado el dato?
+ IF UPDATE(valor_actual)
+ begin
+	--Actualizamos el campo fecha a la fecha/hora actual
+	UPDATE Reporte_valor_jugador SET fecha=GetDate() WHERE nro_jugador =(SELECT nro_jugador FROM inserted);
+ 
+    -- A modo de auditoría, añadimos un registro en la tabla expStatusHistory
+	INSERT INTO Reg_cambios_valor_jugador(nro_jugador, valor_anterior) 
+	(SELECT nro_jugaor, valor_actual
+	FROM deleted 
+	WHERE nro_jugador = deleted.nro_jugador);
+ END;	
+-- La tabla deleted contiene información sobre los valores ANTIGUOS mientras que la tabla inserted contiene los NUEVOS valores.
+-- Ambas tablas son virtuales y tienen la misma estructura que la tabla a la que se asocia el Trigger. 
+
+ -- Se obtiene los datos de la tabla Reg_cambios_valor_jugador
+
+ SELECT * 
+ FROM Reg_cambios_valor_jugador
+
+ UPDATE Reporte_valor_jugador SET valor_actual = 1500
+ WHERE nro_jugador = 30289148
+
+--Se comprueba el cambio
+
+SELECT * 
+FROM Reporte_valor_jugador
+WHERE nro_jugador = 30289148
+
+------------------------------------------
+  /*se crea el trigger para borrado*/
+
+CREATE TRIGGER AU_BorradoReporte
+ON Reporte_valor_jugador
+FOR DELETE
+AS
+ --Si se quiere borrar se dispara el error
+	 BEGIN
+		RAISERROR('No puede borrar eliminar registros, intente cambiar la calificacion',16,1)
+		ROLLBACK TRANSACTION
+    -- Genera un erorr al intentar borrar
+ END;
+
+ -- Se obtiene los datos de la tabla Reg_cambios_valor_jugador
+
+ SELECT * 
+ FROM Reg_cambios_valor_jugador
+
+ DELETE Reporte_valor_jugador
+ WHERE nro_jugador = 51632895 AND codReporte = 56;
+
+--Se comprueba el cambio
+
+ SELECT * 
+ FROM Reporte_valor_jugador
+ ORDER BY codGrado DESC
+
+---------------------------------------------------------------------------------------------------------
 --Procedimiento para eliminar un club
 
 --Procedimiento para eliminar un jugador
