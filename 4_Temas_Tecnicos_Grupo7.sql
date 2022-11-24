@@ -131,20 +131,19 @@ CREATE TABLE Reg_cambios_valor_jugador
 	nro_jugador int NOT NULL	PRIMARY KEY,
 	valor_anterior int NOT NULL,
 	fecha_cambio datetime NOT NULL DEFAULT getdate(),
-	/*usuario varchar(20) not null*/
 )
 
 --Se crea el trigger para cambio
 
-CREATE TRIGGER AU_CambiosReporte
-ON Reporte_valor_jugador
+CREATE TRIGGER AU_CambiosJugador
+ON jugador
  AFTER UPDATE 
  AS 
  -- ¿Ha cambiado el dato?
  IF UPDATE(valor_actual)
  begin
 	--Actualizamos el campo fecha a la fecha/hora actual
-	UPDATE Reporte_valor_jugador SET fecha=GetDate() WHERE nro_jugador =(SELECT nro_jugador FROM inserted);
+	UPDATE jugador SET fecha=GetDate() WHERE nro_jugador =(SELECT nro_jugador FROM inserted);
  
     -- A modo de auditoría, añadimos un registro en la tabla expStatusHistory
 	INSERT INTO Reg_cambios_valor_jugador(nro_jugador, valor_anterior) 
@@ -195,7 +194,6 @@ AS
 
  SELECT * 
  FROM Reporte_valor_jugador
- ORDER BY codGrado DESC
 
 ---------------------------------------------------------------------------------------------------------
 --Procedimiento para eliminar un club
